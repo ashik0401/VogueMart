@@ -73,7 +73,7 @@ export default function ProductsPage() {
           <div className="bg-white dark:bg-gray-800 rounded-lg p-6 max-w-2xl relative overflow-y-auto max-h-[90vh]">
             <button
               onClick={closeModal}
-              className="absolute top-0.5 right-2 text-gray-500 hover:text-red-500 font-bold text-xl"
+              className="absolute top-0.5 right-2 text-gray-500 hover:text-red-500 font-bold text-xl cursor-pointer"
             >
               &times;
             </button>

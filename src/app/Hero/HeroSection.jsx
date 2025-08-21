@@ -5,7 +5,7 @@ export default function HeroSection() {
     <section className="bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         
-        {/* Image */}
+     
         <div className="flex justify-center order-1 md:order-2">
           <img
             src="/hero image.png"
@@ -14,7 +14,7 @@ export default function HeroSection() {
           />
         </div>
 
-        {/* Text */}
+        
         <div className="order-2 md:order-1 text-center md:text-left">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
             Discover Our Premium <span className="text-blue-600">Products</span>

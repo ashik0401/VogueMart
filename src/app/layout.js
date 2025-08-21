@@ -3,8 +3,10 @@ import "./globals.css";
 import Navbar from "./navbar/Navbar";
 
 export const metadata = {
-  title: "My Landing Page",
-  description: "Modern Next.js landing page example",
+  title: "VogueMart",
+  icons: {
+    icon: "/logo.png", 
+  },
 };
 
 export default function RootLayout({ children }) {

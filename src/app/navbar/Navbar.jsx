@@ -10,7 +10,7 @@ export default function Navbar() {
 
         <>
             <li><Link
-            href='/'
+                href='/'
             >home</Link></li>
             <li><Link href='/productsPage'
             > Products</Link></li>
@@ -20,7 +20,7 @@ export default function Navbar() {
 
 
     return (
-        <div className="navbar bg-base-100 shadow-sm">
+        <div className="navbar bg-base-100 shadow-sm flex justify-center items-center  fixed top-0 left-0 w-full  z-50">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -35,7 +35,7 @@ export default function Navbar() {
                         {links}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">daisyUI</a>
+                <h1 className='text-3xl font-bold'>Vogue<span className='text-blue-500'>Mart</span></h1>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -43,7 +43,9 @@ export default function Navbar() {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Button</a>
+                <Link
+                    href='/logIn'
+                    className="btn bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Login</Link>
             </div>
         </div>
     );
