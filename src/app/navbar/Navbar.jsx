@@ -1,6 +1,7 @@
 "use client";
 
 import link from 'daisyui/components/link';
+import Link from 'next/link';
 import React from 'react';
 
 export default function Navbar() {
@@ -8,9 +9,12 @@ export default function Navbar() {
     const links = (
 
         <>
-            <li><a>home</a></li>
-            <li><a>Parent</a> </li>
-            <li><a>Item 3</a></li>
+            <li><Link
+            href='/'
+            >home</Link></li>
+            <li><Link href='/productsPage'
+            > Products</Link></li>
+            <li>Item 3</li>
         </>
     )
 
