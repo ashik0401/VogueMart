@@ -13,7 +13,7 @@
     "autoprefixer": "^10.4.21",
     "bcrypt": "^6.0.0",
     "daisyui": "^5.0.50",
-    "mongodb": "^6.18.0",
+    "mongodb": "^5.9.2",
     "next": "15.5.0",
     "next-auth": "^4.24.11",
     "postcss": "^8.5.6",

@@ -8,7 +8,7 @@ export async function GET() {
     const db = client.db(process.env.MONGODB_DB);
     const products = await db.collection("products").find({}).sort({ _id: -1 }).toArray();
     return new Response(JSON.stringify(products), { status: 200 });
-  } catch (err) {
+  } catch {
     return new Response(JSON.stringify({ error: "Failed to fetch products" }), { status: 500 });
   }
 }
@@ -19,7 +19,7 @@ export async function POST(req) {
     if (!session) return new Response(JSON.stringify({ error: "Unauthorized" }), { status: 401 });
 
     const data = await req.json();
-    if (!data.name || !data.brand || !data.description || !data.price || !data.image || !data.features) {
+    if (!data.name || !data.brand || !data.description || !data.price || !data.image) {
       return new Response(JSON.stringify({ error: "All fields are required" }), { status: 400 });
     }
 
@@ -32,13 +32,13 @@ export async function POST(req) {
       description: data.description,
       price: data.price,
       image: data.image,
-      features: Array.isArray(data.features) ? data.features : [data.features],
+      features: Array.isArray(data.features) ? data.features : data.features ? [data.features] : [],
       createdBy: session.user.email,
       createdAt: new Date(),
     });
 
     return new Response(JSON.stringify(result), { status: 201 });
-  } catch (err) {
+  } catch {
     return new Response(JSON.stringify({ error: "Failed to add product" }), { status: 500 });
   }
 }
