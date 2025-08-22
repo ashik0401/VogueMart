@@ -13,7 +13,7 @@ Vogue Mart is a modern e-commerce platform built with Next.js and NextAuth for a
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/your-username/vogue-mart.git
+git clone https://github.com/ashik0401/VogueMart
 cd vogue-mart
 npm install
 
