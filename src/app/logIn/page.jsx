@@ -6,16 +6,15 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
-export default function LoginPage() {
+export default function Login() {
   const [showPass, setShowPass] = useState(false);
   const [error, setError] = useState("");
   const { data: session } = useSession();
   const router = useRouter();
 
-
   useEffect(() => {
     if (session) {
-      router.push("/");
+      router.push("/productsPage");
     }
   }, [session, router]);
 
@@ -29,13 +28,13 @@ export default function LoginPage() {
       redirect: false,
       email,
       password,
-      callbackUrl: "/", 
+      callbackUrl: "/productsPage",
     });
 
     if (res?.error) {
       setError(res.error);
     } else {
-      router.push(res.url || "/");
+      router.push(res.url || "/productsPage");
     }
   };
 
@@ -52,7 +51,6 @@ export default function LoginPage() {
 
           {error && <p className="text-red-500">{error}</p>}
 
-         
           <div>
             <label className="label md:text-lg">Email</label>
             <input
@@ -64,7 +62,6 @@ export default function LoginPage() {
             />
           </div>
 
-         
           <div>
             <span className="label md:text-lg">Password</span>
             <label className="input focus-within:outline-none w-full">
@@ -88,7 +85,6 @@ export default function LoginPage() {
             </label>
           </div>
 
-      
           <button
             type="submit"
             className="btn w-full border-[#e5e5e5] bg-white hover:bg-gray-100 mt-2 dark:text-black"
@@ -98,10 +94,9 @@ export default function LoginPage() {
 
           <div className="divider">OR</div>
 
-        
           <button
             type="button"
-            onClick={() => signIn("google", { callbackUrl: "/" })}
+            onClick={() => signIn("google", { callbackUrl: "/productsPage" })}
             className="btn w-full border-[#e5e5e5] bg-white hover:bg-gray-100 flex justify-center items-center"
           >
             <svg
@@ -133,7 +128,6 @@ export default function LoginPage() {
             </span>
           </button>
 
-          
           <p className="text-center mt-4">
             Don’t have an account?
             <Link href="/register">

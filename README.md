@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Vogue Mart
 
-## Getting Started
+## 🔗 Live Site
 
-First, run the development server:
+🌐 [Visit Live Website](https://vogue-mart.vercel.app/)
 
+## Short Project Description
+Vogue Mart is a modern e-commerce platform built with Next.js and NextAuth for authentication. Users can browse products, view product details, and log in using Google or email/password. The platform features a clean, responsive UI with support for dark mode.
+
+---
+
+## Setup & Installation Instructions
+
+1. **Clone the repository**
 ```bash
+git clone https://github.com/your-username/vogue-mart.git
+cd vogue-mart
+npm install
+
+
+NEXTAUTH_URL=http://localhost:3000/
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+NEXT_PUBLIC_IMGBB_KEY=your_imgbb_api_key
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ ---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Route Summary
+Route	   Description
+/Home      / Landing page
+/login	    Login page with Google and email/password       authentication
+/register	User registration page
+/productsPage	Browse all products
+/productsPage?productId=<id>	Product detail modal for a specific product
+/api/auth/*	NextAuth API routes for authentication
+/api/products	API endpoint to fetch product data
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+Next.js 15 (App Router)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+NextAuth.js (Authentication)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+React & Tailwind CSS
 
-## Deploy on Vercel
+DaisyUI (UI components)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+MongoDB (Database)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+🤝 Contact
+Md. Ashik Mahmud
+📧 ashikmahmud0825@gmail.com
