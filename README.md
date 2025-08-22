@@ -36,6 +36,7 @@ Route	   Description
 /productsPage?productId=<id>	Product detail modal for a specific product
 /api/auth/*	NextAuth API routes for authentication
 /api/products	API endpoint to fetch product data
+/dashboard/add-product   Add new product page (protected)
 
 ---
 
