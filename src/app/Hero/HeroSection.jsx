@@ -1,9 +1,11 @@
 "use client";
 
+import Link from "next/link";
+
 export default function HeroSection() {
   return (
-    <section className="bg-gray-10 md:w-11/12 mx-auto mt-4">
-      <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <section className="bg-blue-100  dark:bg-gray-800  md:h-[70vh] pt-6 shadow-2xl">
+      <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center md:h-full" >
         
      
         <div className="flex justify-center order-1 md:order-2 bg-transparent">
@@ -24,12 +26,12 @@ export default function HeroSection() {
             collection and find the perfect fit for your needs.
           </p>
           <div className="mt-6 flex justify-center md:justify-start gap-4">
-            <a
-              href="/products"
+            <Link
+              href="/productsPage"
               className="px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
             >
               Shop Now
-            </a>
+            </Link>
           </div>
         </div>
 

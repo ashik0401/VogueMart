@@ -1,23 +1,28 @@
+
 import Footer from "./Footer/Footer";
-import "./globals.css";
 import Navbar from "./navbar/Navbar";
+import "./globals.css";
+import { SessionProviderWrapper } from "./SessionProviderWrapper";
+import { Toaster } from "react-hot-toast";
 
 export const metadata = {
   title: "VogueMart",
   icons: {
-    icon: "/favicon.png", 
+    icon: "/favicon.png",
   },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+     <html lang="en">
       <body>
-        <Navbar />
-        <main
-        className="min-h-screen dark:bg-gray-900"
-        >{children}</main>
-        <Footer/>
+        <SessionProviderWrapper>
+          <Navbar />
+          <main className="min-h-screen dark:dark:bg-gray-900 ">
+             <Toaster position="top-right" reverseOrder={false} />
+            {children}</main>
+          <Footer />
+        </SessionProviderWrapper>
       </body>
     </html>
   );

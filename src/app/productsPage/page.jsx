@@ -39,7 +39,6 @@ export default function ProductsPage() {
 
   return (
     <section className="md:w-11/12 mx-auto px-5 py-25 ">
-      <h1 className="text-3xl font-bold mb-4"> Products</h1>
       <div className="grid sm:grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-4">
         {products.map((product) => (
           <div

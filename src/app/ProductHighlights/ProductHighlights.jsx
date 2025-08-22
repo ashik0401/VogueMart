@@ -42,7 +42,7 @@ export default function ProductHighlights() {
               <img
                 src={product.image}
                 alt={product.name}
-                className="w-full h-56 object-cover"
+                className="w-full sm:h-56 object-cover"
               />
               <div className="p-5 flex-1 flex flex-col text-start">
                 <h3 className="text-lg font-semibold mb-2">{product.name}</h3>
@@ -82,7 +82,7 @@ export default function ProductHighlights() {
             <img
               src={selectedProduct.image}
               alt={selectedProduct.name}
-              className="w-full h-96 object-cover rounded mb-4"
+              className="w-full sm:h-96 object-cover rounded mb-4"
             />
             <h2 className="text-2xl font-bold mb-2">{selectedProduct.name}</h2>
             <p className="text-gray-600 dark:text-gray-300 mb-2">
