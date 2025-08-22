@@ -5,7 +5,7 @@ import Navbar from "./navbar/Navbar";
 export const metadata = {
   title: "VogueMart",
   icons: {
-    icon: "/logo.png", 
+    icon: "/favicon.png", 
   },
 };
 
@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
       <body>
         <Navbar />
         <main
-        className="min-h-screen "
+        className="min-h-screen dark:bg-gray-900"
         >{children}</main>
         <Footer/>
       </body>

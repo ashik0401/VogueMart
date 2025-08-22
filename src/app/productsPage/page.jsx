@@ -38,13 +38,13 @@ export default function ProductsPage() {
   };
 
   return (
-    <section className="md:w-11/12 mx-auto px-5 py-16">
-      <h1 className="text-3xl font-bold mb-8">Our Products</h1>
+    <section className="md:w-11/12 mx-auto px-5 py-25 ">
+      <h1 className="text-3xl font-bold mb-4"> Products</h1>
       <div className="grid sm:grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-4">
         {products.map((product) => (
           <div
             key={product._id}
-            className="border rounded-lg shadow hover:shadow-lg transition flex flex-col justify-between h-full"
+            className="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden hover:shadow-lg transition flex flex-col border border-gray-200 dark:border-none"
           >
             <img
               className="w-full lg:h-72 sm:h-52 rounded-t-lg"
@@ -59,7 +59,8 @@ export default function ProductsPage() {
             <div className="p-5 text-end">
               <button
                 onClick={() => openModal(product)}
-                className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+                className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition cursor-pointer
+                "
               >
                 Details
               </button>
